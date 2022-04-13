@@ -21,5 +21,5 @@ The aim of this project was to practice my **jQuery** skills.
 
 To deploy this project visit:
 
-[link]()
+[TO-DO List App](https://boydiego.github.io/to-do-list-app/)
 
