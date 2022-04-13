@@ -1,7 +1,7 @@
 // selecting elements
 let addButton = $('#button');
 
-// callback functions
+// callback function to add item
 function addToDoItem() {
   // CREATING ITEMS
   let inputValue = $('#input').val();
@@ -26,8 +26,10 @@ function addToDoItem() {
   }
 
   listItem.on('dblclick', crossOutItem);
+
+  // CHANGE ORDER OF ITEMS
+  list.sortable();
 }
 
-// event listeners
+// event listener to add item
 addButton.on('click', addToDoItem);
-
