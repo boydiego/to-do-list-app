@@ -8,17 +8,21 @@ function addToDoItem() {
   let list = $('#list');
 
   let listItem = $('<li></li>');
-  let crossOutButton = $('<button>X</button>');
+  let deleteButton = $('<crossOutButton>X</crossOutButton>');
 
-  listItem.append(inputValue).append(crossOutButton);
-  list.append(listItem);
+  if (inputValue === '') {
+    alert("👇 Don't forget to add a to do");
+  } else {
+    listItem.append(inputValue).append(deleteButton);
+    list.append(listItem);
+  }
 
   // DELETING ITEMS
   function deleteItem() {
-    crossOutButton.parent().remove();
+    deleteButton.parent().remove();
   }
 
-  crossOutButton.on('click', deleteItem);
+  deleteButton.on('click', deleteItem);
 
   // CROSSING OUT ITEMS
   function crossOutItem() {
